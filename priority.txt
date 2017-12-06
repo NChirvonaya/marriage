@@ -1,7 +1,7 @@
 3
-Сережа Катя Маша Настя
-Максим Настя Маша Катя
-Федор Настя Катя Маша
-Настя Максим Федор Сережа
-Маша Федор Максим Сережа
-Катя Максим Сережа Федор
+Serge Kate Mary Alice
+Bob Alice Mary Kate
+Franz Alice Kate Mary
+Alice Bob Franz Serge
+Mary Franz Bob Serge
+Kate Bob Serge Franz

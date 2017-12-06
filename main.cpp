@@ -7,14 +7,13 @@
 
 using namespace std;
 
-vector<queue<int> > men, women;
+vector<queue<int> > men, women; //priority lists
 vector<string> findmname, findwname;
 map<string, int> mnames, wnames;
-vector<vector<int> > prior;
-vector<bool> in_search;
-vector<int> variant;
-int hopeless(0);
-int ins(0);
+vector<vector<int> > prior; //priotity of every man for every woman
+vector<bool> in_search; //men's status
+vector<int> variant; //potentian women's husbands
+int ins(0); //amount of men in active search
 
 void break_up(int M)
 {
@@ -24,7 +23,6 @@ void break_up(int M)
     ins++;
   }
   if (men[M].empty()) {
-    hopeless++;
     in_search[M] = false;
     ins--;
   }
@@ -33,6 +31,7 @@ void break_up(int M)
 void go_to_a_date(int M, int W)
 {
   int maybe = variant[W];
+  //checking if M is appropriate for W
   if (maybe == -1 || prior[maybe][W] < prior[M][W]) {
     variant[W] = M;
     in_search[M] = false;
